@@ -55,7 +55,7 @@ func run(dir string, pattern string) error {
 
 	path := filepath.Join(dir, time.Now().Format(pattern))
 
-	file, err := os.OpenFile(path, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0644)
+	file, err := os.OpenFile(path, os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0644)
 	if err != nil {
 		return err
 	}
